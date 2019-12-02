@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # personal-webpage-app (personal-webpage)
 
 A Quasar Framework app
@@ -20,3 +21,7 @@ quasar build
 
 ### Customize the configuration
 See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
+=======
+# Personal-Page
+My personal webpage
+>>>>>>> 5f8175a8c0490559db77ecac7ea647189d892474

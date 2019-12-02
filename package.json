@@ -15,6 +15,7 @@
     "quasar": "^1.0.0"
   },
   "devDependencies": {
+    "@angular/cli": "^8.3.20",
     "@quasar/app": "^1.0.0",
     "@quasar/quasar-app-extension-icon-genie": "^1.1.2"
   },
