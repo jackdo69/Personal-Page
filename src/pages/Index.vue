@@ -1,6 +1,6 @@
 <template>
   <q-page class="flex bg-brown-1">
-    <div class="q-pa-lg">
+    <div class="q-pa-md">
       <div class="col q-ma-md">
         <!-- START WELCOME SECTION -->
         <div class="text-center">
@@ -17,12 +17,12 @@
           <br />
           <br />
           <div class="text-h6 text-italic text-blue-grey-9">About me</div>
-          <div class="text-body2">I am a Vietnamese coder based in Sydney. I mainly work on
+          <div class="text-body2" style="width:70%">I am a Vietnamese coder based in Sydney. I mainly work on
             Javascript framework (Vue and React) along with many other tools (Firebase, Wordpress..)
             Besides from coding, I love surfing, hanging out with my mates and reading manga.  
           </div>
           <br />
-          <q-img src="https://i.imgur.com/kBOdrsX.jpg" style="height: 18em; max-width: 24em;" />
+          <q-img class ="rounded-borders" src="https://i.imgur.com/kBOdrsX.jpg" style="height: 18em; max-width: 24em;" />
         </section>
 
         <!-- END WELCOME SECTION -->
@@ -45,12 +45,21 @@
                   <div class="text-h6">[Firebase-VueJS] Post-it Notes</div>
                 </q-card-section>
                 <q-card-actions align="around">
+                  <a href="https://github.com/jackdo69/Pronote">
                   <q-btn
                     color="secondary"
                     icon-right="img:https://i.imgur.com/gA2DgP3.png"
                     label="Code"
                   />
-                  <q-btn color="red" icon-right="img:https://i.imgur.com/fhlgfX6.png" label="Demo" />
+                  </a>
+                  
+                  <a href="https://pronote-2026b.web.app/">
+                    <q-btn
+                    color="red"
+                    icon-right="img:https://i.imgur.com/fhlgfX6.png"
+                    label="Demo" />
+                  </a>
+                  
                 </q-card-actions>
               </q-card>
             </div>
@@ -62,12 +71,20 @@
                   <div class="text-h6">[Wordpress] Business Website</div>
                 </q-card-section>
                 <q-card-actions align="around">
-                  <q-btn
+                  <a href="https://github.com/jackdo69/Oriental-Produce">
+                    <q-btn
                     color="secondary"
                     icon-right="img:https://i.imgur.com/gA2DgP3.png"
                     label="Code"
                   />
-                  <q-btn color="red" icon-right="img:https://i.imgur.com/fhlgfX6.png" label="Demo" />
+                  </a>
+                  <a href="http://orientalproduce.com.au/">
+                    <q-btn
+                    color="red"
+                    icon-right="img:https://i.imgur.com/fhlgfX6.png"
+                    label="Demo" />
+                  </a>
+                  
                 </q-card-actions>
               </q-card>
             </div>
@@ -82,12 +99,21 @@
                   <div class="text-h6">[FCC-ReactJS] Pomodoro Clock</div>
                 </q-card-section>
                 <q-card-actions align="around">
-                  <q-btn
+                  <a href="https://github.com/jackdo69/pomodoro-clock">
+                    <q-btn
                     color="secondary"
                     icon-right="img:https://i.imgur.com/gA2DgP3.png"
                     label="Code"
                   />
-                  <q-btn color="red" icon-right="img:https://i.imgur.com/fhlgfX6.png" label="Demo" />
+                  </a>
+                  
+                  <a href="https://codepen.io/jackdo69/full/oNggPYQ">
+                    <q-btn
+                    color="red"
+                    icon-right="img:https://i.imgur.com/fhlgfX6.png"
+                    label="Demo" />
+                  </a>
+                  
                 </q-card-actions>
               </q-card>
             </div>
@@ -101,12 +127,21 @@
                   <div class="text-h6">[FCC-ReactJS] Random Quote</div>
                 </q-card-section>
                 <q-card-actions align="around">
-                  <q-btn
+                  <a href="https://github.com/jackdo69/javascript-quote-machine">
+                    <q-btn
                     color="secondary"
                     icon-right="img:https://i.imgur.com/gA2DgP3.png"
                     label="Code"
                   />
-                  <q-btn color="red" icon-right="img:https://i.imgur.com/fhlgfX6.png" label="Demo" />
+                  </a>
+                  
+                  <a href="https://codepen.io/jackdo69/full/OGrGbN">
+                    <q-btn
+                    color="red"
+                    icon-right="img:https://i.imgur.com/fhlgfX6.png"
+                    label="Demo" />
+                  </a>
+                  
                 </q-card-actions>
               </q-card>
             </div>
@@ -118,12 +153,21 @@
                   <div class="text-h6">[FCC-ReactJS] Drum Machine</div>
                 </q-card-section>
                 <q-card-actions align="around">
-                  <q-btn
+                  <a href="https://github.com/jackdo69/Drum-Machine">
+                    <q-btn
                     color="secondary"
                     icon-right="img:https://i.imgur.com/gA2DgP3.png"
                     label="Code"
                   />
-                  <q-btn color="red" icon-right="img:https://i.imgur.com/fhlgfX6.png" label="Demo" />
+                  </a>
+                  
+                  <a href="https://codepen.io/jackdo69/full/jOEOjoM">
+                    <q-btn
+                    color="red"
+                    icon-right="img:https://i.imgur.com/fhlgfX6.png"
+                    label="Demo" />
+                  </a>
+                  
                 </q-card-actions>
               </q-card>
             </div>
@@ -135,12 +179,21 @@
                   <div class="text-h6">[FCC-ReactJS] Calculator</div>
                 </q-card-section>
                 <q-card-actions align="around">
-                  <q-btn
+                  <a href="https://github.com/jackdo69/javascript-calculator">
+                    <q-btn
                     color="secondary"
                     icon-right="img:https://i.imgur.com/gA2DgP3.png"
                     label="Code"
                   />
-                  <q-btn color="red" icon-right="img:https://i.imgur.com/fhlgfX6.png" label="Demo" />
+                  </a>
+                  
+                  <a href="https://codepen.io/jackdo69/full/OGKEbG">
+                    <q-btn
+                    color="red"
+                    icon-right="img:https://i.imgur.com/fhlgfX6.png"
+                    label="Demo" />
+                  </a>
+                  
                 </q-card-actions>
               </q-card>
             </div>
