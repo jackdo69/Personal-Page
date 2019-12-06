@@ -23,6 +23,7 @@
           </div>
           <br />
           <q-img class ="rounded-borders" src="https://i.imgur.com/kBOdrsX.jpg" style=" max-width: 32em;" />
+          <br />
         </section>
 
         <!-- END WELCOME SECTION -->
@@ -119,7 +120,7 @@ img {
   /* justify-content: center; */
   align-items: center;
   width: 100%;
-  height: 80vh;
+  /* height: 80vh; */
 }
 
 .projects-section {
