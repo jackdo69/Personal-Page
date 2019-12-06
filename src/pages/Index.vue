@@ -17,7 +17,7 @@
           <br />
           <br />
           <div class="text-h6 text-italic text-blue-grey-9">About me</div>
-          <div class="text-body2" style="width:70%">I am a Vietnamese coder based in Sydney. I mainly work on
+          <div class="text-body1" style="width:70%">I am a Vietnamese coder based in Sydney. I mainly work on
             Javascript framework (Vue and React) along with many other tools (Firebase, Wordpress..)
             Besides from coding, I love surfing, hanging out with my mates and reading manga.  
           </div>
@@ -37,166 +37,14 @@
           <br />
           <div class="text-h6 text-italic text-blue-grey-9">My Projects</div>
           
-          <div class="row justify-center">
-            <div class="col-xs-10 col-sm-5 col-md-3 q-pa-md">
-              <q-card class="my-card">
-                <img src="https://i.imgur.com/Gbw8Caj.png" />
-                <q-card-section>
-                  <div class="text-h6">[Firebase-VueJS] Post-it Notes</div>
-                </q-card-section>
-                <q-card-actions align="around">
-                  <a href="https://github.com/jackdo69/Pronote">
-                  <q-btn
-                    color="secondary"
-                    icon-right="img:https://i.imgur.com/gA2DgP3.png"
-                    label="Code"
-                  />
-                  </a>
-                  
-                  <a href="https://pronote-2026b.web.app/">
-                    <q-btn
-                    color="red"
-                    icon-right="img:https://i.imgur.com/fhlgfX6.png"
-                    label="Demo" />
-                  </a>
-                  
-                </q-card-actions>
-              </q-card>
-            </div>
+          <div class="row justify-center" style="width:80%" >
 
-            <div class="col-xs-10 col-sm-5 col-md-3 q-pa-md">
-              <q-card class="my-card">
-                <img src="https://i.imgur.com/lm1sJzB.png" />
-                <q-card-section>
-                  <div class="text-h6">[Wordpress] Business Website</div>
-                </q-card-section>
-                <q-card-actions align="around">
-                  <a href="https://github.com/jackdo69/Oriental-Produce">
-                    <q-btn
-                    color="secondary"
-                    icon-right="img:https://i.imgur.com/gA2DgP3.png"
-                    label="Code"
-                  />
-                  </a>
-                  <a href="http://orientalproduce.com.au/">
-                    <q-btn
-                    color="red"
-                    icon-right="img:https://i.imgur.com/fhlgfX6.png"
-                    label="Demo" />
-                  </a>
-                  
-                </q-card-actions>
-              </q-card>
-            </div>
+            <project 
+              v-for="(project, key) in projects"
+              :key="key"
+              :project="project" />
 
             
-
-            <div class="col-xs-10 col-sm-5 col-md-3 q-pa-md">
-              <q-card class="my-card">
-                <img src="https://i.imgur.com/jpPdKcQ.png" />
-                
-                <q-card-section>
-                  <div class="text-h6">[FCC-ReactJS] Pomodoro Clock</div>
-                </q-card-section>
-                <q-card-actions align="around">
-                  <a href="https://github.com/jackdo69/pomodoro-clock">
-                    <q-btn
-                    color="secondary"
-                    icon-right="img:https://i.imgur.com/gA2DgP3.png"
-                    label="Code"
-                  />
-                  </a>
-                  
-                  <a href="https://codepen.io/jackdo69/full/oNggPYQ">
-                    <q-btn
-                    color="red"
-                    icon-right="img:https://i.imgur.com/fhlgfX6.png"
-                    label="Demo" />
-                  </a>
-                  
-                </q-card-actions>
-              </q-card>
-            </div>
-          </div>
-
-          <div class="row justify-center">
-            <div class="col-xs-10 col-sm-5 col-md-3 q-pa-md">
-              <q-card class="my-card">
-                <img src="https://i.imgur.com/c45p7xT.png" />
-                <q-card-section>
-                  <div class="text-h6">[FCC-ReactJS] Random Quote</div>
-                </q-card-section>
-                <q-card-actions align="around">
-                  <a href="https://github.com/jackdo69/javascript-quote-machine">
-                    <q-btn
-                    color="secondary"
-                    icon-right="img:https://i.imgur.com/gA2DgP3.png"
-                    label="Code"
-                  />
-                  </a>
-                  
-                  <a href="https://codepen.io/jackdo69/full/OGrGbN">
-                    <q-btn
-                    color="red"
-                    icon-right="img:https://i.imgur.com/fhlgfX6.png"
-                    label="Demo" />
-                  </a>
-                  
-                </q-card-actions>
-              </q-card>
-            </div>
-
-            <div class="col-xs-10 col-sm-5 col-md-3 q-pa-md">
-              <q-card class="my-card">
-                <img src="https://i.imgur.com/JOXdPer.png" />
-                <q-card-section>
-                  <div class="text-h6">[FCC-ReactJS] Drum Machine</div>
-                </q-card-section>
-                <q-card-actions align="around">
-                  <a href="https://github.com/jackdo69/Drum-Machine">
-                    <q-btn
-                    color="secondary"
-                    icon-right="img:https://i.imgur.com/gA2DgP3.png"
-                    label="Code"
-                  />
-                  </a>
-                  
-                  <a href="https://codepen.io/jackdo69/full/jOEOjoM">
-                    <q-btn
-                    color="red"
-                    icon-right="img:https://i.imgur.com/fhlgfX6.png"
-                    label="Demo" />
-                  </a>
-                  
-                </q-card-actions>
-              </q-card>
-            </div>
-
-            <div class="col-xs-10 col-sm-5 col-md-3 q-pa-md">
-              <q-card class="my-card">
-                <img src="https://i.imgur.com/fKuhUOS.png" />
-                <q-card-section>
-                  <div class="text-h6">[FCC-ReactJS] Calculator</div>
-                </q-card-section>
-                <q-card-actions align="around">
-                  <a href="https://github.com/jackdo69/javascript-calculator">
-                    <q-btn
-                    color="secondary"
-                    icon-right="img:https://i.imgur.com/gA2DgP3.png"
-                    label="Code"
-                  />
-                  </a>
-                  
-                  <a href="https://codepen.io/jackdo69/full/OGKEbG">
-                    <q-btn
-                    color="red"
-                    icon-right="img:https://i.imgur.com/fhlgfX6.png"
-                    label="Demo" />
-                  </a>
-                  
-                </q-card-actions>
-              </q-card>
-            </div>
           </div>
         </section>
 
@@ -229,9 +77,15 @@
 
 <script>
 
+import { mapGetters } from 'vuex' 
 
 export default {
-
+  computed: {
+    ...mapGetters('projects', ['projects'])
+  },
+  components: {
+    'project': require('components/Project.vue').default
+  }
 }
 </script>
 
