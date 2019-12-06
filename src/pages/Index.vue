@@ -22,7 +22,7 @@
             Besides from coding, I love surfing, hanging out with my mates and reading manga.  
           </div>
           <br />
-          <q-img class ="rounded-borders" src="https://i.imgur.com/kBOdrsX.jpg" style="height: 18em; max-width: 24em;" />
+          <q-img class ="rounded-borders" src="https://i.imgur.com/kBOdrsX.jpg" style=" max-width: 32em;" />
         </section>
 
         <!-- END WELCOME SECTION -->
@@ -71,20 +71,33 @@
       </div>
 
       <hr />
+      <small>&copy; Copyright {{currentYear}} Jack Do. All Rights Reserved.</small>
     </div>
   </q-page>
 </template>
 
 <script>
 
-import { mapGetters } from 'vuex' 
+import { mapGetters, mapActions } from 'vuex' 
+import { Loading, QSpinnerBall } from 'quasar'
 
 export default {
+  
   computed: {
+    currentYear() {
+      let d = new Date()
+      return d.getFullYear()
+    },
     ...mapGetters('projects', ['projects'])
   },
   components: {
     'project': require('components/Project.vue').default
+  },
+  methods: {
+    ...mapActions('projects', ['fbReadData'])
+  },
+  created() {
+    this.fbReadData()
   }
 }
 </script>

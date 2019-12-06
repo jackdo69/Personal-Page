@@ -1,50 +1,69 @@
-
+import Vue from 'vue'
+import { firebaseDb } from 'boot/firebase'
 
 
 const state = {
     projects: {
-        'id1': {
-            name: '[Firebase-VueJS] Post-it Notes',
-            imgURL:'https://i.imgur.com/Gbw8Caj.png',
-            codeURL:'https://github.com/jackdo69/Pronote',
-            demoURL:'https://pronote-2026b.web.app/'
-        },
-        'id2': {
-            name: '[Wordpress] Business Website',
-            imgURL:'https://i.imgur.com/lm1sJzB.png',
-            codeURL:'https://github.com/jackdo69/Oriental-Produce',
-            demoURL:'http://orientalproduce.com.au/'
-        },
-        'id3': {
-            name: '[FCC-ReactJS] Pomodoro Clock',
-            imgURL:'https://i.imgur.com/jpPdKcQ.png',
-            codeURL:'https://github.com/jackdo69/pomodoro-clock',
-            demoURL:'https://codepen.io/jackdo69/full/oNggPYQ'
-        },
-        'id4': {
-            name: '[FCC-ReactJS] Random Quote',
-            imgURL:'https://i.imgur.com/c45p7xT.png',
-            codeURL:'https://github.com/jackdo69/javascript-quote-machine',
-            demoURL:'https://codepen.io/jackdo69/full/OGrGbN'
-        },
-        'id5': {
-            name: '[FCC-ReactJS] Drum Machine',
-            imgURL:'https://i.imgur.com/JOXdPer.png',
-            codeURL:'https://github.com/jackdo69/Drum-Machine',
-            demoURL:'https://codepen.io/jackdo69/full/jOEOjoM'
-        },
-        'id6': {
-            name: '[FCC-ReactJS] Calculator',
-            imgURL:'https://i.imgur.com/fKuhUOS.png',
-            codeURL:'https://github.com/jackdo69/javascript-calculator',
-            demoURL:'https://codepen.io/jackdo69/full/OGKEbG'
-        }
+        // 'id1': {
+        //     name: '[Firebase-VueJS] Post-it Notes',
+        //     imgURL:'https://i.imgur.com/Gbw8Caj.png',
+        //     codeURL:'https://github.com/jackdo69/Pronote',
+        //     demoURL:'https://pronote-2026b.web.app/'
+        // },
+        // 'id2': {
+        //     name: '[Wordpress] Business Website',
+        //     imgURL:'https://i.imgur.com/lm1sJzB.png',
+        //     codeURL:'https://github.com/jackdo69/Oriental-Produce',
+        //     demoURL:'http://orientalproduce.com.au/'
+        // },
+        // 'id3': {
+        //     name: '[FCC-ReactJS] Pomodoro Clock',
+        //     imgURL:'https://i.imgur.com/jpPdKcQ.png',
+        //     codeURL:'https://github.com/jackdo69/pomodoro-clock',
+        //     demoURL:'https://codepen.io/jackdo69/full/oNggPYQ'
+        // },
+        // 'id4': {
+        //     name: '[FCC-ReactJS] Random Quote',
+        //     imgURL:'https://i.imgur.com/c45p7xT.png',
+        //     codeURL:'https://github.com/jackdo69/javascript-quote-machine',
+        //     demoURL:'https://codepen.io/jackdo69/full/OGrGbN'
+        // },
+        // 'id5': {
+        //     name: '[FCC-ReactJS] Drum Machine',
+        //     imgURL:'https://i.imgur.com/JOXdPer.png',
+        //     codeURL:'https://github.com/jackdo69/Drum-Machine',
+        //     demoURL:'https://codepen.io/jackdo69/full/jOEOjoM'
+        // },
+        // 'id6': {
+        //     name: '[FCC-ReactJS] Calculator',
+        //     imgURL:'https://i.imgur.com/fKuhUOS.png',
+        //     codeURL:'https://github.com/jackdo69/javascript-calculator',
+        //     demoURL:'https://codepen.io/jackdo69/full/OGKEbG'
+        // }
     }
 }
 
-const mutations = {}
+const mutations = {
+    addProject(state, payload) {
+        Vue.set(state.projects, payload.id, payload.project)
+    } 
+}
 
-const actions =  {}
+const actions =  {
+    fbReadData({ commit }) {
+        let projects = firebaseDb.ref('projects/')
+
+        //initial check for data
+        projects.on('child_added', snapshot => {
+            let project = snapshot.val()
+            let payload = {
+                id: snapshot.key,
+                project: project
+            }
+            commit('addProject', payload)
+        })
+    }
+}
 
 const getters = {
     projects(state) {

@@ -1,5 +1,5 @@
 <template>
-    <div class="col-xs-10 col-sm-5 col-md-4 q-pa-md">
+    <div class="col-xs-12 col-sm-5 col-md-4 q-pa-md">
               <q-card class="my-card">
                 <img 
                 :src="project.imgURL" />
