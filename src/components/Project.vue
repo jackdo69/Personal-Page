@@ -1,5 +1,8 @@
 <template>
-    <div class="col-xs-12 col-sm-5 col-md-4 q-pa-md">
+    <div
+      class="col-xs-12 col-sm-8 col-md-4 q-pa-md"
+      style="max-width: 30em;
+              min-width: 20em">
               <q-card class="my-card">
                 <img 
                 :src="project.imgURL" />
