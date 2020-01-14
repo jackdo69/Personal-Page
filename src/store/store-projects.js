@@ -3,14 +3,16 @@ import { firebaseDb } from 'boot/firebase'
 
 
 const state = {
-    projects: {
-        
-    }
+    projects: {},
+    loading: false
 }
 
 const mutations = {
     addProject(state, payload) {
         Vue.set(state.projects, payload.id, payload.project)
+    },
+    setLoading(state, value) {
+        state.loading = value
     } 
 }
 
@@ -18,7 +20,16 @@ const actions =  {
     fbReadData({ commit }) {
         let projects = firebaseDb.ref('projects/')
 
-        //initial check for data
+
+        //initial data
+        projects.once('value', snapshot => {
+            commit('setLoading', true)
+        },error => {
+            console.log(error);
+            
+        })
+
+        //child added
         projects.on('child_added', snapshot => {
             let project = snapshot.val()
             let payload = {
