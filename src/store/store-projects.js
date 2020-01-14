@@ -23,7 +23,7 @@ const actions =  {
 
         //initial data
         projects.once('value', snapshot => {
-            commit('setLoading', true)
+            // commit('setLoading', true)
         },error => {
             console.log(error);
             
@@ -37,6 +37,7 @@ const actions =  {
                 project: project
             }
             commit('addProject', payload)
+            commit('setLoading', true)
         })
     }
 }
