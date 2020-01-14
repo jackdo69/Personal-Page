@@ -22,7 +22,7 @@
             Besides from coding, I love surfing, hanging out with my mates and reading manga.  
           </div>
           <br />
-          <q-img class ="rounded-borders" src="https://i.imgur.com/kBOdrsX.jpg" style=" max-width: 32em;" />
+          <q-img class ="rounded-borders" src="https://i.imgur.com/RithXQF.jpg" style=" max-width: 32em;" />
           <br />
         </section>
 

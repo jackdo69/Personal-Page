@@ -5,7 +5,7 @@
         <div class="q-pa-sm full-width row">
           <div class="col-6 relative-position">
             <q-avatar class="q-pb-md absolute-center" size="4em">
-              <img src="https://i.imgur.com/4LD0lMn.jpg" />
+              <img src="https://i.imgur.com/NK3r4nG.jpg" />
             </q-avatar>
           </div>
 
