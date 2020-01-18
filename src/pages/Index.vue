@@ -42,7 +42,7 @@
             <br />
             <div class="text-h6 text-italic text-blue-grey-9">My Projects</div>
 
-            <div class="row justify-center" style="width:80%">
+            <div class="projects" style="width:80%">
               <project v-for="(project, key) in projects" :key="key" :project="project" />
             </div>
           </section>
@@ -138,6 +138,14 @@ img {
   align-items: center;
   width: 100%;
 }
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 240px);
+  grid-column-gap: 100px;
+}
+
+
 
 .contact-section {
   display: flex;
